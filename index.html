@@ -7,24 +7,39 @@
     <title>Recipe Tracker</title>
 </head>
 <body>
-    <header cleass="header">
+    <header class="header">
         <h1>Recipe Tracker</h1>
-        <a id="homeBtn" href="#home">Home</a>
-<!--Link to html for the Saved Recipes page?-->
-        <a id="savedBtn" href="#saved" target="_blank">Saved</a>
     </header>
-<!--Search for recipes here-->
-    <div class="nav">
-        <input id="searchBar" type="text" placeholder="Search...">
-        <button id="searchBtn" type="submit">Search</button>
-      </div> 
+    <main>
+        <div class="card">
+          <h3>Search for Recipes</h3>
+        <form id="user-form">
+          <label for="recipe"></label>
+          <input name="recipe" id="recipe" type="text" placeholder="Enter Recipe"/>
+          <button type="submit">Search</button>
+        </form>
+        </div> 
+
+        <div>
+          <h2>Showing Recipes: <span id="recipe-search-term"></span></h2>
+          <div id="recipes-container"></div>
+        </div>
+
+<!-- <a id="homeBtn" href="#home">Home</a> -->
+
+<!--Link to html for the Saved Recipes page?-->
+        <!-- <a id="savedBtn" href="#saved" target="_blank">Saved</a> -->
+
 <!--Links to recipes will appear here after a search is done-->
-      <container class="searchResults">
+      <!-- <container class="searchResults">
           <button id="getNutrition" href="#nutrition" target="_blank">Get Nutrition Facts</button>
-      </container>  
+      </container>   -->
+
 <!--Saved Recipes will appear here-->
-      <container class="savedRecipes">
+      <!-- <container class="savedRecipes">
           <h2>Saved Recipes</h2>
-      </container>
+      </container> -->
+    </main>  
+    <script src="./assets/script.js"></script>   
 </body>
 </html>
