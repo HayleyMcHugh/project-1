@@ -6,10 +6,10 @@ var recipesSearchTerm = document.querySelector('#recipe-search-term');
 var formSubmitHandler = function (event) {
     event.preventDefault();
 
-    var recipe = recipeInputEl.value.trim();
+    var recipes = recipeInputEl.value.trim();
 
-    if (recipe) {
-      getUserRecipes(recipe);
+    if (recipes) {
+      getUserRecipes(recipes);
 
       recipesContainerEL.textContent = '';
       recipeInputEl.value = '';
@@ -18,17 +18,19 @@ var formSubmitHandler = function (event) {
     }
 };
 
-var getUserRecipes = function (user) {
-    var apiURL = 'https://api.spoonacular.com/recipes/complexSearch?apiKey=1bccdbd99014422bbed7295eb22db074';
+var getUserRecipes = function(searchUserInput) {
+    var apiURL = `https://api.spoonacular.com/recipes/complexSearch?apiKey=1bccdbd99014422bbed7295eb22db074&query=${searchUserInput}`;
 
     fetch(apiURL)
       .then(function (response) {
-        if (response.ok) {
-          response.json().then(function (data) {
-            displayRecipes(data, user);
-          });
-        } else {
-            alert('Error: ' + response.statusText);
+        return response.json();
+      }) 
+      .then(function (data) {
+        console.log(data)
+        for(var i = 0; i < data.results.length; i++) {
+          var recipeTitle = document.createElement('p');
+          recipeTitle.textContent=data.results[i].title;
+          recipesContainerEL.appendChild(recipeTitle);
         }
       })
       .catch(function (error) {
@@ -36,39 +38,38 @@ var getUserRecipes = function (user) {
       });
 };
 
-var displayRecipes = function (recipes, searchTerm) {
-    if (recipes.length === 0) {
-        recipesContainerEL.textContent = 'No recipes found.';
-        return;
-    }
+// var displayRecipes = function (recipes, searchTerm) {
+//     if (recipes.length === 0) {
+//         recipesContainerEL.textContent = 'No recipes found.';
+//         return;
+//     }
 
-recipesSearchTerm.textContent = searchTerm;
+// recipesSearchTerm.textContent = searchTerm;
 
-for (var i = 0; i < recipes.length; i++) {
-    var recipeName = recipes[i];
+// for (var i = 0; i < recipes.length; i++) {
+//     var recipeName = recipes[i];
 
-    var recipesEl = document.createElement('div');
-    recipesEl.classList = 'list-item flex-row justify-space-between align-center';
+//     var recipesEl = document.createElement('div');
+//     recipesEl.classList = 'list-item flex-row justify-space-between align-center';
 
-    var titleEL = document.createElement('span');
-    titleEL.textContent = recipeName;
+//     var titleEL = document.createElement('span');
+//     titleEL.textContent = recipeName;
 
-    recipesEl.appendChild(titleEL);
+//     recipesEl.appendChild(titleEL);
 
-    var statusEl = document.createElement('span');
-    statusEl.classList = 'flex-row align-center';
+//     var statusEl = document.createElement('span');
+//     statusEl.classList = 'flex-row align-center';
 
-if (recipes[i] > 0) {
-    statusEl.innerHTML = 
-    "<i class='fas fa-times status-icon icon-danger'></i>" + recipes[i];
-} else {
-    statusEl.innerHTML = "<i class'fas fa-check-square status-icon icon-success'></i>";
-}
+// if (recipes[i] > 0) {
+//     statusEl.innerHTML = "Okay" + recipes[i];
+// } else {
+//     statusEl.innerHTML = "None";
+// }
 
-    recipesEl.appendChild(statusEl);
+//     recipesEl.appendChild(statusEl);
 
-    recipesContainerEL.appendChild(recipesEl);
-    }
-};
+//     recipesContainerEL.appendChild(recipesEl);
+//     }
+// };
 
 userFormEl.addEventListener('submit', formSubmitHandler); 
