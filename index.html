@@ -1,2 +1,30 @@
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Tracker</title>
+</head>
+<body>
+    <header cleass="header">
+        <h1>Recipe Tracker</h1>
+        <a id="homeBtn" href="#home">Home</a>
+<!--Link to html for the Saved Recipes page?-->
+        <a id="savedBtn" href="#saved" target="_blank">Saved</a>
+    </header>
+<!--Search for recipes here-->
+    <div class="nav">
+        <input id="searchBar" type="text" placeholder="Search...">
+        <button id="searchBtn" type="submit">Search</button>
+      </div> 
+<!--Links to recipes will appear here after a search is done-->
+      <container class="searchResults">
+          <button id="getNutrition" href="#nutrition" target="_blank">Get Nutrition Facts</button>
+      </container>  
+<!--Saved Recipes will appear here-->
+      <container class="savedRecipes">
+          <h2>Saved Recipes</h2>
+      </container>
+</body>
+</html>
