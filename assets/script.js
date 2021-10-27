@@ -38,38 +38,4 @@ var getUserRecipes = function(searchUserInput) {
       });
 };
 
-// var displayRecipes = function (recipes, searchTerm) {
-//     if (recipes.length === 0) {
-//         recipesContainerEL.textContent = 'No recipes found.';
-//         return;
-//     }
-
-// recipesSearchTerm.textContent = searchTerm;
-
-// for (var i = 0; i < recipes.length; i++) {
-//     var recipeName = recipes[i];
-
-//     var recipesEl = document.createElement('div');
-//     recipesEl.classList = 'list-item flex-row justify-space-between align-center';
-
-//     var titleEL = document.createElement('span');
-//     titleEL.textContent = recipeName;
-
-//     recipesEl.appendChild(titleEL);
-
-//     var statusEl = document.createElement('span');
-//     statusEl.classList = 'flex-row align-center';
-
-// if (recipes[i] > 0) {
-//     statusEl.innerHTML = "Okay" + recipes[i];
-// } else {
-//     statusEl.innerHTML = "None";
-// }
-
-//     recipesEl.appendChild(statusEl);
-
-//     recipesContainerEL.appendChild(recipesEl);
-//     }
-// };
-
 userFormEl.addEventListener('submit', formSubmitHandler); 
