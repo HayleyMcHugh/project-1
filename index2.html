@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wine</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Wine Pairing</h1>
+    </header>
+    <main>
+        <div class="card">
+          <h3>Search for a Wine Pairing</h3>
+        <form id="user-form">
+          <label for="wine"></label>
+          <input name="wine" id="wine" type="text" placeholder="Enter a food dish"/>
+          <button type="submit">Search</button>
+        </form>
+        </div> 
+
+        <div>
+          <h2>Showing wines that would best go with your dish: <span id="wine-search-term"></span></h2>
+          <div id="wine-container"></div>
+        </div>
+    </main>  
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./assets/script2.js"></script>   
+</body>
+</html>
