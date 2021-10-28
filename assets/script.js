@@ -31,12 +31,17 @@ var getUserRecipes = function(searchUserInput) {
           var recipeTitle = document.createElement('p');
           var recipeImg = document.createElement('img');
           var recipeLink = document.createElement('a');
+          var saveRecipe = document.createElement('button');
           recipeTitle.textContent=data.results[i].title;
           recipeImg.setAttribute("src", data.results[i].image);
           recipeLink.setAttribute("href", data.results[i].sourceUrl);
           recipesContainerEL.appendChild(recipeTitle);
           recipeLink.appendChild(recipeImg);
           recipesContainerEL.appendChild(recipeLink);
+          recipeTitle.appendChild(saveRecipe);
+
+          // saveRecipe.addEventListener('click', event => {
+          // })
         }
       })
       .catch(function (error) {
