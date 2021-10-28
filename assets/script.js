@@ -19,7 +19,7 @@ var formSubmitHandler = function (event) {
 };
 
 var getUserRecipes = function(searchUserInput) {
-    var apiURL = `https://api.spoonacular.com/recipes/complexSearch?apiKey=1bccdbd99014422bbed7295eb22db074&query=${searchUserInput}`;
+    var apiURL = `https://api.spoonacular.com/recipes/complexSearch?apiKey=1bccdbd99014422bbed7295eb22db074&query=${searchUserInput}&addRecipeInformation=true`;
 
     fetch(apiURL)
       .then(function (response) {
@@ -29,8 +29,14 @@ var getUserRecipes = function(searchUserInput) {
         console.log(data)
         for(var i = 0; i < data.results.length; i++) {
           var recipeTitle = document.createElement('p');
+          var recipeImg = document.createElement('img');
+          var recipeLink = document.createElement('a');
           recipeTitle.textContent=data.results[i].title;
+          recipeImg.setAttribute("src", data.results[i].image);
+          recipeLink.setAttribute("href", data.results[i].sourceUrl);
           recipesContainerEL.appendChild(recipeTitle);
+          recipeLink.appendChild(recipeImg);
+          recipesContainerEL.appendChild(recipeLink);
         }
       })
       .catch(function (error) {
