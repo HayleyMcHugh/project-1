@@ -1,0 +1,50 @@
+/* Google font import */
+@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap');
+
+body {
+  padding-top: 100px;
+}
+
+.navbar {
+  background-color: turquoise;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+#sloganid {
+  padding-top: 2px;
+  padding-left: 15px;
+  font-size: 15px;
+}
+
+.container1 {
+  display: flex;
+  justify-content: center;
+  padding: 150px;
+}
+
+.showrecipes {
+  color: white;
+  font-family: 'Nothing You Could Do', cursive;  
+  font-weight: bolder;
+  font-size: 40px;
+  text-align: center;
+  height: 400px;
+  background-color: turquoise;
+}
+
+#recipeh2 {
+  padding-top: 10px;
+}
+
+#recipes-container {
+  font-family: monospace;
+  font-size: 20px;
+}
+
+footer {
+  color: #949494;
+  padding: 5px;  
+  text-align: center;
+}
