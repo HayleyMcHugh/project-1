@@ -4,26 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="./assets/style.css" rel="stylesheet">
     <title>Recipe Tracker</title>
 </head>
-<body>
-    <header class="header">
-        <h1>Recipe Tracker</h1>
-    </header>
-    <main>
-        <div class="card">
-          <h3>Search for Recipes</h3>
-        <form id="user-form">
-          <label for="recipe"></label>
-          <input name="recipe" id="recipe" type="text" placeholder="Enter Recipe"/>
-          <button type="submit">Search</button>
-        </form>
-        </div> 
 
-        <div>
-          <h2>Showing Recipes: <span id="recipe-search-term"></span></h2>
-          <div id="recipes-container"></div>
-        </div>
+<body>
+<nav class="navbar">
+  <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
+    <div class="flex items-center flex-shrink-0 text-white mr-6">
+      <svg class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><path d="https://w7.pngwing.com/pngs/41/295/png-transparent-ingredient-computer-icons-cooking-food-recipe-cooking-ingredients-food-text-recipe.png"/></svg>
+      <span class="font-semibold text-3xl tracking-tight"> Recipe Tracker </span>
+      <p id="sloganid"><i> "Find all the recipes you need!" </i></p>
+    </div>
+    <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+      <div class="text-sm lg:flex-grow">
+      </div>
+      <div>
+        <a href="https://github.com/HayleyMcHugh/project-1" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-black mt-4 lg:mt-0"> GitHub Repository </a>
+        <a href="https://spoonacular.com/food-api" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-black mt-4 lg:mt-0"> API Source </a>
+      </div>
+    </div>
+  </nav>
+</nav>
+
+<div class="container1">
+  <form id="user-form" class="w-full max-w-md">
+    <div class="flex items-center border-b border-teal-500 py-2">
+      <input id="recipe" name="recipe" class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="Enter recipe!">
+      <button type="submit" class="flex-shrink-0 bg-teal-500 border-teal-500 text-sm border-2 text-black hover:border-transparent hover:bg-white py-1 px-5 rounded">
+        Search
+      </button>
+    </div>
+  </form>
+</div>
+
+<div class="showrecipes">
+  <h2 id="recipeh2"> Recipes to choose from: <span id="recipe-search-term"></span></h2>
+  <div id="recipes-container"></div>
+</div>
+
+<footer id="footer"> &copy 2021 Recipe Tracker </footer>
 
 <!-- <a id="homeBtn" href="#home">Home</a> -->
 
