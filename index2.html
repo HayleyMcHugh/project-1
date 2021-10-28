@@ -1,51 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind CSS Framework -->
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <!-- css stylesheet -->
     <link href="./assets/style.css" rel="stylesheet">
+    <!-- Title -->
     <title> Wine Pairing </title>
-</head>
+  </head>
 
-<body class="winebody">
-  <nav class="w-full opacity-90">
-    <nav class="flex items-center justify-between flex-wrap p-6">
-      <div class="flex items-center flex-shrink-0 text-white mr-6">
-        <span class="font-semibold text-3xl tracking-tight"> Wine Pairing </span>
-        <p class="pt-2 pl-2 text-base" id="sloganid"><i> "Which Wine is best served with your meals!" </i></p>
+  <!-- Body with winebody class for background image -->
+  <body class="winebody">
+    <!-- Navigation bar -->
+    <nav class="w-full opacity-90">
+      <nav class="flex items-center justify-between flex-wrap p-6">
+        <div class="flex items-center flex-shrink-0 text-white mr-6">
+          <!-- Heading -->
+          <span class="font-semibold text-3xl tracking-tight"> Wine Pairing </span>
+          <!-- Slogan -->
+          <p class="pt-2 pl-2 text-base" id="sloganid"><i> "Find the perfect wine pairing for your meal!" </i></p>
+        </div>
+        <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+          <div class="text-sm lg:flex-grow"></div>
+        <div>
+          <!-- Button link to Recipe Tracker -->
+          <a href="./index.html" target="_blank" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-black mt-4 lg:mt-0"> Recipe Tracker </a>
+          <!-- Button link to GitHub Repository -->
+          <a href="https://github.com/HayleyMcHugh/project-1" target="_blank" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-black mt-4 lg:mt-0"> GitHub Repository </a>
+          <!-- Button link to API source that was used -->
+          <a href="https://spoonacular.com/food-api" target="_blank" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-black mt-4 lg:mt-0"> API Source </a>
+        </div>
       </div>
-      <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-        <div class="text-sm lg:flex-grow"></div>
-      <div>
-        <a href="./index.html" target="_blank" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-black mt-4 lg:mt-0"> Recipe Tracker </a>
-        <a href="https://github.com/HayleyMcHugh/project-1" target="_blank" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-black mt-4 lg:mt-0"> GitHub Repository </a>
-        <a href="https://spoonacular.com/food-api" target="_blank" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-black mt-4 lg:mt-0"> API Source </a>
-      </div>
+    </nav>
+    </nav>
+
+    <!-- Search bar -->
+    <div class="p-36 flex justify-center">
+      <form id="user-form" class="w-full max-w-md">
+        <div class="flex items-center rounded-md opacity-90 bg-white py-2 p-2.5" id="searchbar">
+          <input id="wine" name="wine" class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight  focus:outline-none" type="text" placeholder="Enter a food dish!">
+          <!-- Submit button for search bar -->
+          <button type="submit" class="flex-shrink-0 text-sm border-2 text-black hover:border-transparent hover:bg-white py-1 px-5 rounded"> Search   </button>
+        </div>
+      </form>
     </div>
-  </nav>
-  </nav>
 
-  <div class="p-36 flex justify-center">
-    <form id="user-form" class="w-full max-w-md">
-      <div class="flex items-center rounded-md opacity-90 bg-white py-2 p-2.5" id="searchbar">
-        <input id="wine" name="wine" class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="Enter a food dish!">
-        <button type="submit" class="flex-shrink-0 text-sm border-2 text-black hover:border-transparent hover:bg-white py-1 px-5 rounded"> Search </button>
-      </div>
-    </form>
-  </div>
+    <!-- Container for recommended wine that gets fetched from the api -->
+    <div class="flex justify-center mx-8 md:container md:mx-auto overflow-y-auto md:overflow-scroll opacity-90 md:max-w-lg max-w-screen-sm max-w-md text-white rounded-md text-3xl pt-2 bg-red-900 h-96 showwine">
+      <h2 class="p-2"> Recommended Wine Pairings: <span id="wine-search-term"></span></h2>
+        <div id="wine-container"></div>
+    </div>
 
-  <div class="flex justify-center mx-8 md:container md:mx-auto overflow-y-auto md:overflow-scroll opacity-90 md:max-w-lg max-w-screen-sm max-w-md text-white rounded-md text-4xl pt-2 bg-red-900 h-96 showwine">
-    <h2 class="p-2"> Recommended Wine Pairings: <span id="wine-search-term"></span></h2>
-      <div id="wine-container"></div>
-  </div>
-
-  <div class="pt-3">
-    <footer class="text-center text-white p-3"> &copy 2021 Wine Pairing </footer>
-  </div>
+    <!-- Footer -->
+    <div class="pt-3">
+      <footer class="text-center text-white p-3"> &copy 2021 Wine Pairing </footer>
+    </div>
  
+    <!-- Javascript src files -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./assets/script2.js"></script>   
-</body>
+  </body>
 </html>
