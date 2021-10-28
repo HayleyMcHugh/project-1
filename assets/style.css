@@ -1,50 +1,45 @@
 /* Google font import */
 @import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap');
 
-body {
-  padding-top: 100px;
+/* Background image for recipe tracker along with elements */
+.recipebody {
+  background-image: url("./assets/images/recipewallpaper.jpg");
+  background-size: 1700px 900px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-.navbar {
-  background-color: turquoise;
-  position: fixed;
-  width: 100%;
-  top: 0;
+/* Background image for wine pairing along with elements */
+.winebody {
+  background-image: url("./assets/images/winewallpaper.jpg");
+  background-size: 1600px 875px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-#sloganid {
-  padding-top: 2px;
-  padding-left: 15px;
-  font-size: 15px;
-}
-
-.container1 {
-  display: flex;
-  justify-content: center;
-  padding: 150px;
-}
-
-.showrecipes {
-  color: white;
+/* Google font family */
+.showrecipes,
+.showwine {
   font-family: 'Nothing You Could Do', cursive;  
-  font-weight: bolder;
-  font-size: 40px;
-  text-align: center;
-  height: 400px;
-  background-color: turquoise;
-}
-
-#recipeh2 {
-  padding-top: 10px;
 }
 
 #recipes-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-family: monospace;
   font-size: 20px;
 }
 
-footer {
-  color: #949494;
-  padding: 5px;  
-  text-align: center;
+#recipes-container img {
+  border-radius: 30px;
+  padding: 10px;
+}
+
+/* Image hover elements */
+img:hover {
+  opacity: .90;
+  transition: ease-out;
 }
