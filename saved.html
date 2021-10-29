@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind CSS framework -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <!-- css stylesheet -->
+    <link href="./assets/style.css" rel="stylesheet">
+    <!-- Title -->
+    <title> Saved Recipes </title>
+  </head>
+
+  <body class="recipebody">
+    <!-- Navigation bar -->
+    <nav class="w-full md:w-full">
+      <nav class="flex items-center justify-between flex-wrap p-6">
+        <div class="flex items-center flex-shrink-0 text-white mr-6">
+          <!-- Heading -->
+          <span class="font-semibold text-3xl tracking-tight"> Saved Recipes </span>
+          <!-- Slogan -->
+          <p class="pl-2 pt-2 text-base" id="sloganid"><i> "Your local storage!" </i></p>
+        </div>
+        <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+          <div class="text-sm lg:flex-grow"></div>
+        <div>
+          <!-- Button link back to Recipe Tracker main page -->
+          <a href="./index.html" target="_blank" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 mt-4 lg:mt-0"> Back to Recipe Tracker </a>
+          <!-- Button link back to Wine Pairing main page -->
+          <a href="./index2.html" target="_blank" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 mt-4 lg:mt-0"> Back to Wine Pairing </a>
+        </div>
+      </div>
+    </nav>
+    </nav>
+
+    <div class="">
+    <!-- Save recipes div from local storage -->
+    <div class="flex justify-center mx-8 md:container md:mx-auto overflow-y-auto md:overflow-scroll opacity-90 md:max-w-lg max-w-screen-sm max-w-md text-white rounded-md text-4xl pt-2 h-96 showrecipes">
+      <h2 class="p-2"> Whats been saved! <span id="recipe-search-term"></span></h2>
+        <div id="recipes-container"></div>
+    </div>
+    <!-- Clear local storage button-->
+    <div class="flex justify-center">
+      <button id="clearBtn" type="submit" class="flex-shrink-0 text-sm border-2 text-black hover:border-transparent bg-white py-1 px-10 rounded"> Clear </button>
+    </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="pt-3">
+      <footer class="absolute bottom-0 text-center text-white p-3 pt-3 w-full"> &copy 2021 Saved Recipes </footer>
+    </div>
+    
+    <!-- Javascript src files -->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="./assets/script.js"></script>
+  </body>
+</html>
+
