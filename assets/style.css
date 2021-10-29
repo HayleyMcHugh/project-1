@@ -20,7 +20,7 @@
 }
 
 .savedbody {
-  background-image: url("/Users/latommyla/Downloads/savedwallpaper.jpg");
+  background-image: url("./images/savedwallpaper.jpg");
   background-size: 1600px 875px;
   background-position: center;
   background-repeat: no-repeat;
