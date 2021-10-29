@@ -49,10 +49,10 @@ var getUserRecipes = function (searchUserInput) {
 
         saveRecipe.addEventListener('click', event => {
           event.preventDefault();
-          var savedRecipe = [];
-          savedRecipe.push(recipeTitleData, recipeImgData, recipeLinkData);
-          localStorage.setItem("recipe", JSON.stringify(savedRecipe));
-          console.log(savedRecipe)
+          var localRecipe = [];
+          localRecipe.push(recipeTitleData, recipeImgData, recipeLinkData);
+          localStorage.setItem("recipe", JSON.stringify(localRecipe));
+          console.log(localRecipe)
         })
       }
     })
