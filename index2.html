@@ -28,8 +28,8 @@
         <div>
           <!-- Button link to Recipe Tracker -->
           <a href="./index.html" target="_blank" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-black mt-4 lg:mt-0"> Recipe Tracker </a>
-          <!-- Button link to GitHub Repository -->
-          <a href="https://github.com/HayleyMcHugh/project-1" target="_blank" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-black mt-4 lg:mt-0"> GitHub Repository </a>
+          <!-- Button link to Saved Recipes -->
+          <a href="./saved.html" target="_blank" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-black mt-4 lg:mt-0"> Saved Recipes </a>
           <!-- Button link to API source that was used -->
           <a href="https://spoonacular.com/food-api" target="_blank" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-black mt-4 lg:mt-0"> API Source </a>
         </div>
@@ -49,9 +49,9 @@
     </div>
 
     <!-- Container for recommended wine that gets fetched from the api -->
-    <div class="flex justify-center mx-8 md:container md:mx-auto overflow-y-auto md:overflow-scroll opacity-90 md:max-w-lg max-w-screen-sm max-w-md text-white rounded-md text-3xl pt-2 bg-red-900 h-96 showwine">
+    <div class="flex flex-wrap justify-center mx-8 md:container md:mx-auto overflow-y-auto md:overflow-scroll opacity-90 md:max-w-lg max-w-screen-sm max-w-md text-white rounded-md text-3xl pt-2 bg-red-900 h-96 showwine">
       <h2 class="p-2"> Recommended Wine Pairings: <span id="wine-search-term"></span></h2>
-        <div id="wine-container"></div>
+        <div class="flex flex-col" id="wine-container"></div>
     </div>
 
     <!-- Footer -->

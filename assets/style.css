@@ -26,9 +26,8 @@
 }
 
 /* Recipes container for javascript api feed */
-#recipes-container {
-  display: flex;
-  flex-direction: column;
+#recipes-container,
+#wine-container {
   align-items: center;
   font-family: monospace;
   font-size: 20px;
@@ -36,6 +35,11 @@
 
 /* Radius and padding on api images */
 #recipes-container img {
+  border-radius: 30px;
+  padding: 10px;
+}
+
+#wine-container img {
   border-radius: 30px;
   padding: 10px;
 }
