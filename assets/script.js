@@ -59,6 +59,7 @@ var getUserRecipes = function (searchUserInput) {
           var localRecipe = [];
           localRecipe.push(recipeTitle, recipeImage, recipeLink);
           saveRecipeToLocalStorage(localRecipe);
+          console.log(localRecipe)
         });
       }
     })
