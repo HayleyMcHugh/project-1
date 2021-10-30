@@ -27,50 +27,62 @@ var getUserRecipes = function (searchUserInput) {
     })
     .then(function (data) {
       console.log(data)
-      for (var i = 0; i < data.results.length; i++) {
-        var recipeTitle = document.createElement('p');
-        var recipeTitleData = data.results[i].title;
-        var recipeImg = document.createElement('img');
-        var recipeImgData = data.results[i].image
-        var recipeLink = document.createElement('a');
-        var recipeLinkData = data.results[i].sourceUrl;
-        var saveRecipeBtn = document.createElement('button');
-        recipeTitle.textContent= recipeTitleData;
-        recipeImg.setAttribute("src", recipeImgData);
-        recipeLink.setAttribute("href", recipeLinkData);
-
-        recipesContainerEL.appendChild(recipeTitle);
-        recipeLink.appendChild(recipeImg);
-        recipesContainerEL.appendChild(recipeLink);
-        
-        saveRecipeBtn.setAttribute("data-title", data.results[i].title);
-        saveRecipeBtn.setAttribute("data-image", data.results[i].image);
-        saveRecipeBtn.setAttribute("data-link", data.results[i].sourceUrl);
-        saveRecipeBtn.textContent = "Save Recipe";
-        saveRecipeBtn.classList.add('btn');
-        recipesContainerEL.appendChild(saveRecipeBtn);
-
-        saveRecipeBtn.addEventListener('click', event => {
-          event.preventDefault();
-          var recipeTitle = event.target.getAttribute('data-title');
-          var recipeImage = event.target.getAttribute('data-image');
-          var recipeLink = event.target.getAttribute('data-link');
-          
-          var localRecipe = [];
-          localRecipe.push(recipeTitle, recipeImage, recipeLink);
-          saveRecipeToLocalStorage(localRecipe);
-          console.log(localRecipe)
-        });
-      }
+      renderFoundRecipes(data.results);
     })
     .catch(function (error) {
       alert('Unable to connect');
     });
 };
-  var saveRecipeToLocalStorage = function (recipe) {
-  var savedRecipes = JSON.parse(localStorage.getItem('savedRecipes')) || [];
-  savedRecipes.push(recipe);
-  localStorage.setItem('savedRecipes', JSON.stringify(savedRecipes));
+
+var savedRecipe = [];
+
+function renderFoundRecipes(arrayOfRecipes){
+
+  for (var i = 0; i < arrayOfRecipes.length; i++) {
+    var recipeTitle = document.createElement('p');
+    var recipeTitleData = arrayOfRecipes[i].title;
+    var recipeImg = document.createElement('img');
+    var recipeImgData = arrayOfRecipes[i].image
+    var recipeLink = document.createElement('a');
+    var recipeLinkData = arrayOfRecipes[i].sourceUrl;
+    var saveRecipeBtn = document.createElement('button');
+    recipeTitle.textContent= recipeTitleData;
+    recipeImg.setAttribute("src", recipeImgData);
+    recipeLink.setAttribute("href", recipeLinkData);
+
+    recipesContainerEL.appendChild(recipeTitle);
+    recipeLink.appendChild(recipeImg);
+    recipesContainerEL.appendChild(recipeLink);
+    
+    saveRecipeBtn.setAttribute("data-title", arrayOfRecipes[i].title);
+    saveRecipeBtn.setAttribute("data-image", arrayOfRecipes[i].image);
+    saveRecipeBtn.setAttribute("data-link", arrayOfRecipes[i].sourceUrl);
+    saveRecipeBtn.textContent = "Save Recipe";
+    saveRecipeBtn.classList.add('btn');
+    recipesContainerEL.appendChild(saveRecipeBtn);
+  
+
+    saveRecipeBtn.addEventListener('click', event => {
+      event.preventDefault();
+      var recipeTitle = event.target.getAttribute('data-title');
+      var recipeImage = event.target.getAttribute('data-image');
+      var recipeLink = event.target.getAttribute('data-link');
+      
+      var localRecipe = {
+          title: recipeTitle,
+          image: recipeImage,
+          link: recipeLink
+        };
+      console.log(localRecipe);
+      saveRecipeToLocalStorage(localRecipe);
+    });
+  }
+}
+
+var saveRecipeToLocalStorage = function (recipe) {
+var savedRecipes = JSON.parse(localStorage.getItem('savedRecipes')) || [];
+savedRecipes.push(recipe);
+localStorage.setItem('savedRecipes', JSON.stringify(savedRecipes));
 };
 
 userFormEl.addEventListener('submit', formSubmitHandler);
