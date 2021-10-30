@@ -2,29 +2,26 @@
 
 For our first bootcamp project, meant to help us showcase our skills in HTML, CSS (using a framework other than bootstrap !), and JavaScript. We brainstormed a little, and settled on the idea to make a recipe finder. 
 
-The original concept was to have a dessert place locator, then a desserts recipe finder, but for practicality purposes (as well as to fulfill the assignment requirement of having two separate API functions), we ultimately decided on a web-app that finds you a dinner recipe based off of keyword(s) (ingredients).
-
 The recipe finder serves as the first function, and the second aspect is a functionality that pairs a type  of wine that pairs very nicely with the dinner recipe selected. To top things off, the user is able to save their selected recipes to the local storage.
 
 ## Motivation
 
-We wanted to create a functional as well as useful/practical web-app that satisfied the grading criteria, but that could also be actually used. This was a challenging exercise that saw some issues come up, mainly with getting data results, but learning JavaScript functions was also a motivator and Hayley did an amazing job at overcoming her issues to get the functions to work. Tommy also stepped up to the challenge of learning a new CSS framework, Tailwind. Through collective efforts, lots of new knowledge was gained, which on top of receiving a good grade, the learning aspect was also a huge motivation. 
+Our motivation was to create a functional as well as useful/practical web-app that satisfied the grading criteria, but that could also be actually used in the real-world. This was a challenging exercise that saw some issues come up, but learning JavaScript functions was also a motivator and Hayley did an amazing job at overcoming her issues to get the functions to work. Tommy also stepped up to the challenge of learning a new CSS framework, Tailwind. Through collective efforts, lots of new knowledge was gained, which on top of receiving a good grade, the learning aspect was also a huge motivation. 
 
 ## Build Status
 
 Application is running, hosted on github. The link for the running app is: 
 
 ## Code Style 
-The coding styles used are a combination of mostly, functional, and database programming styles. The functional aspect is almost obvious, the whole basis of the project is to have two API's (the functions). The database programming is from having to get the API's to fetch data, log it, and then display it on the webpage.
+The coding styles used are a combination of mostly, functional, and database programming styles. The functional aspect and whole basis of the project is to have two API's (the functions). The database programming is from having to get the API's to fetch data, log it, and then display it on the webpage.
 
 ## Screenshots/ Video/ How To Use
-<!-- i can take care of this -->
+<img src="./assets/images/recipescreenshot.jpg" alt="screencapture of recipe tracker">
+<img src="./assets/images/winescreenshot.jpg" alt="screencapture of wine pairer">
+<img src="./assets/images/savedscreenshot.jpg" alt="screencapture of saved recipes page">
 
 ## Technology,  Script, and Framework Used
-The project uses a dynamic structure of html, JavaScript, with the usual even listeners, jSon, functions, and of course the use of our Spoonacular API's. And a new type of CSS framework , Tailwind for the styling and aesthetics. 
-
-## Features
-<!-- what makes our project stand out -->
+The project uses a dynamic structure of html, JavaScript, with event listeners, JSON, functions, and of course the use of our Spoonacular API's. And a new type of CSS framework , Tailwind for the styling and aesthetics. 
 
 ## Installation
 In the event that you want to use the code yourself, follow these steps!
@@ -48,4 +45,8 @@ Ricardo Crossley
 
 Tommy La 
 
-Google, Bootcamp, StackOverflow, Youtube, our instructor William.
+Google, Bootcamp, StackOverflow, Youtube. 
+
+Our instructor Will Vasquez. 
+
+Our TA Shazeen Fabius.
