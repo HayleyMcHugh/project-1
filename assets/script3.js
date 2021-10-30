@@ -11,19 +11,18 @@ clear.addEventListener("click", function () {
 var savedRecipes = localStorage.getItem("savedRecipes");
 savedRecipes = JSON.parse(savedRecipes);
 
-if (savedRecipes !== null) {
+if (savedRecipes.length !== 0) {
  for (var i = 0; i < savedRecipes.length; i++) {
-  var createP = document.createElement("p");
-  var createImg = document.createElement("img");
-  var createLink = document.createElement("a");
-
-  createP.textContent = savedRecipes[i];
-
-  createImg.setAttribute("src", savedRecipes[i]);
-  createLink.setAttribute("href", savedRecipes[i]);
-
-  savedRecipesContainerEl.appendChild(createP);
-  savedRecipesContainerEl.appendChild(createImg);
-  savedRecipesContainerEl.appendChild(createLink);
+    var createP = document.createElement("p");
+    var createImg = document.createElement("img");
+    var createLink = document.createElement("a");
+    
+    createP.textContent = savedRecipes[i].title;
+    createImg.setAttribute("src", savedRecipes[i].image);
+    createLink.setAttribute("href", savedRecipes[i].link);
+    
+    savedRecipesContainerEl.appendChild(createP);
+    savedRecipesContainerEl.appendChild(createLink);
+    createLink.appendChild(createImg);
  }
 };
