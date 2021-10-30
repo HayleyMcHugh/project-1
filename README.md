@@ -10,7 +10,7 @@ Our motivation was to create a functional as well as useful/practical web-app th
 
 ## Build Status
 
-Application is running, hosted on github. The link for the running app is: 
+Application is running, hosted on github. The link for the running app is: https://hayleymchugh.github.io/project-1/
 
 ## Code Style 
 The coding styles used are a combination of mostly, functional, and database programming styles. The functional aspect and whole basis of the project is to have two API's (the functions). The database programming is from having to get the API's to fetch data, log it, and then display it on the webpage.
