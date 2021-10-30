@@ -53,6 +53,11 @@
   padding: 10px;
 }
 
+#saved-recipes-container img {
+  border-radius: 30px;
+  padding: 10px;
+}
+
 /* Image hover elements */
 img:hover {
   opacity: .90;
