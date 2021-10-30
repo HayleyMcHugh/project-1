@@ -25,6 +25,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  min-height: 100%;
 }
 
 /* Google font family */

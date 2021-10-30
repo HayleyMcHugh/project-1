@@ -35,14 +35,14 @@
     </nav>
 
     <div class="md:flex md:flex-grow">
-    <div class="absolute left-10 md:left-60 md:top-32">
+    <div class="relative left-10 md:left-60 md:top-10">
     <!-- Save recipes div from local storage -->
-    <div class="flex justify-center mx-8 md:container md:mx-auto overflow-y-auto md:overflow-scroll opacity-90 md:max-w-lg max-w-screen-sm max-w-md text-white rounded-md text-4xl pt-2 h-96 showrecipes">
+    <div class="flex flex-wrap justify-center mx-8 md:container md:mx-auto overflow-y-auto md:overflow-scroll opacity-90 md:max-w-lg max-w-screen-sm max-w-md text-white rounded-md text-4xl pt-2 h-96 showrecipes">
       <h2 class="p-2"> Whats been saved! <span id="recipe-search-term"></span></h2>
         <div id="recipes-container"></div>
     </div>
     <!-- Clear local storage button-->
-    <div class="flex justify-center">
+    <div class="pb-40 flex justify-center">
       <button id="clearBtn" type="submit" class="flex-shrink-0 text-sm border-2 text-black hover:border-transparent bg-white py-1 px-10 rounded"> Clear </button>
     </div>
     </div>
@@ -50,7 +50,7 @@
 
     <!-- Footer -->
     <div class="pt-3">
-      <footer class="absolute bottom-0 text-center text-white p-3 pt-3 w-full"> &copy 2021 Saved Recipes </footer>
+      <footer class="absolute text-center text-white p-3 w-full"> &copy 2021 Recipe Tracker </footer>
     </div>
     
     <!-- Javascript src files -->
