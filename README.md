@@ -16,7 +16,7 @@ Application is running, hosted on github. The link for the running app is:
 The coding styles used are a combination of mostly, functional, and database programming styles. The functional aspect and whole basis of the project is to have two API's (the functions). The database programming is from having to get the API's to fetch data, log it, and then display it on the webpage.
 
 ## Screenshots/ Video/ How To Use
-<img src="./assets/images/recipescreenshot.jpg" alt="screencapture of recipe tracker">
+<img src="./assets/images/recipesscreenshot.jpg" alt="screencapture of recipe tracker">
 <img src="./assets/images/winescreenshot.jpg" alt="screencapture of wine pairer">
 <img src="./assets/images/savedscreenshot.jpg" alt="screencapture of saved recipes page">
 
