@@ -57,3 +57,9 @@ img:hover {
   opacity: .90;
   transition: ease-out;
 }
+
+.btn {
+  border-color: rgb(99, 95, 95);
+  border-width: 2px;
+  border-radius: 5px;
+}

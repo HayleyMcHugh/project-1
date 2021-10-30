@@ -34,7 +34,7 @@ var getUserRecipes = function (searchUserInput) {
         var recipeImgData = data.results[i].image
         var recipeLink = document.createElement('a');
         var recipeLinkData = data.results[i].sourceUrl;
-        var saveRecipe = document.createElement('button');
+        var saveRecipeBtn = document.createElement('button');
         recipeTitle.textContent= recipeTitleData;
         recipeImg.setAttribute("src", recipeImgData);
         recipeLink.setAttribute("href", recipeLinkData);
@@ -43,22 +43,33 @@ var getUserRecipes = function (searchUserInput) {
         recipeLink.appendChild(recipeImg);
         recipesContainerEL.appendChild(recipeLink);
         
-        recipesContainerEL.appendChild(saveRecipe);
-        saveRecipe.setAttribute("data-id", data.results[i].id)
-        saveRecipe.textContent = "Save Recipe";
+        saveRecipeBtn.setAttribute("data-title", data.results[i].title);
+        saveRecipeBtn.setAttribute("data-image", data.results[i].image);
+        saveRecipeBtn.setAttribute("data-link", data.results[i].sourceUrl);
+        saveRecipeBtn.textContent = "Save Recipe";
+        saveRecipeBtn.classList.add('btn');
+        recipesContainerEL.appendChild(saveRecipeBtn);
 
-        saveRecipe.addEventListener('click', event => {
+        saveRecipeBtn.addEventListener('click', event => {
           event.preventDefault();
+          var recipeTitle = event.target.getAttribute('data-title');
+          var recipeImage = event.target.getAttribute('data-image');
+          var recipeLink = event.target.getAttribute('data-link');
+          
           var localRecipe = [];
-          localRecipe.push(recipeTitleData, recipeImgData, recipeLinkData);
-          localStorage.setItem("recipe", JSON.stringify(localRecipe));
-          console.log(localRecipe)
-        })
+          localRecipe.push(recipeTitle, recipeImage, recipeLink);
+          saveRecipeToLocalStorage(localRecipe);
+        });
       }
     })
     .catch(function (error) {
       alert('Unable to connect');
     });
+};
+  var saveRecipeToLocalStorage = function (recipe) {
+  var savedRecipes = JSON.parse(localStorage.getItem('savedRecipes')) || [];
+  savedRecipes.push(recipe);
+  localStorage.setItem('savedRecipes', JSON.stringify(savedRecipes));
 };
 
 userFormEl.addEventListener('submit', formSubmitHandler);
