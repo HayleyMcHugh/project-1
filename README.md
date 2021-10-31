@@ -6,7 +6,7 @@ The recipe finder serves as the first function, and the second aspect is a funct
 
 ## Motivation
 
-Our motivation was to create a functional as well as useful/practical web-app that satisfied the grading criteria, but that could also be actually used in the real-world. This was a challenging exercise that saw some issues come up, but learning JavaScript functions was also a motivator and Hayley did an amazing job at overcoming her issues to get the functions to work. Tommy also stepped up to the challenge of learning a new CSS framework, Tailwind. Through collective efforts, lots of new knowledge was gained, which on top of receiving a good grade, the learning aspect was also a huge motivation. 
+Our motivation was to create a functional as well as useful/practical web-app that satisfied the grading criteria, but that could also be actually used in the real-world. This was a challenging exercise that saw some issues come up, but learning JavaScript functions and  learning a new CSS framework, Tailwind was a big motivator. Through collective efforts, lots of new knowledge was gained, which on top of receiving a good grade, the learning aspect was also a huge motivation. 
 
 ## Build Status
 
