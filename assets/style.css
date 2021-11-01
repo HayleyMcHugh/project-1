@@ -71,3 +71,10 @@ img:hover {
   background-color: white;
   border-radius: 5px;
 }
+
+.btn:hover {
+  opacity: .90;
+  transition: ease-out;
+  border-color: black;
+  border-width: 2px;
+}
