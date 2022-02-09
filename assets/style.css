@@ -4,7 +4,7 @@
 /* Background image for recipe tracker along with elements */
 .recipebody {
   background-image: url("./images/recipewallpaper.jpg");
-  background-size: 1700px 900px;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -13,7 +13,7 @@
 /* Background image for wine pairing along with elements */
 .winebody {
   background-image: url("./images/winewallpaper.jpg");
-  background-size: 1600px 875px;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -21,7 +21,7 @@
 
 .savedbody {
   background-image: url("./images/savedwallpaper.jpg");
-  background-size: 1600px 875px;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
